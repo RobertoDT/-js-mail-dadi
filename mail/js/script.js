@@ -8,16 +8,30 @@ var elenco = [
   "ciao@mai.ir",
   "pluto@pippo.com",
   "enzo.pierga@libero.eu"
-]
+];
 
 var email = prompt("Inserisci la tua email");
 
-for(var i=0; i < elenco.length; i++){
+// for(var i=0; i < elenco.length; i++){
+//   if(email == elenco[i]){
+//     alert("Sei nella lista degli invitati, Benvenuto!");
+//     break;
+//   }
+// }
+// if(email != elenco[i]){
+//   alert("Mi dispiace, non sei nella lista!");
+// }
+
+var emailTrovata = false;
+
+for(var i = 0; i < elenco.length; i++){
   if(email == elenco[i]){
-    alert("Sei nella lista degli invitati, Benvenuto!");
-    break;
+    emailTrovata = true;
   }
 }
-if(email != elenco[i]){
-  alert("Mi dispiace, non sei nella lista!");
+
+if(emailTrovata == true){
+  alert("Sei nella lista degli invitati, Benvenuto!");
+} else {
+  alert("Mi dispiace, non sei nella lista!")
 }
